@@ -1,6 +1,7 @@
-import { NestFactory } from '@nestjs/core';
+import 'module-alias';
 import { AppModule } from './app.module';
-import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+import { NestFactory } from '@nestjs/core';
+import { HttpExceptionFilter } from '@common/filters/http-exception.filter';
 import { UnprocessableEntityException, ValidationError, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {

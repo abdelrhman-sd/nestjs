@@ -1,13 +1,13 @@
 import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
-import { configModuleOptions } from './factories/config-module-options.factory';
+import { configModuleOptions } from '@common/factories/config-module-options.factory';
 import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
-import { HttpExceptionFilter } from './filters/http-exception.filter';
+import { HttpExceptionFilter } from '@common/filters/http-exception.filter';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TypeOrmModuleConfigFactory } from './factories/typeorm-module-options.factory';
-import { CacheModuleOptionsFactory } from './factories/cache-module-options.factory';
-import TransformResponseInterceptor from './interceptors/transform-response.interceptor';
+import { TypeOrmModuleConfigFactory } from '@common/factories/typeorm-module-options.factory';
+import { CacheModuleOptionsFactory } from '@common/factories/cache-module-options.factory';
+import TransformResponseInterceptor from '@common/interceptors/transform-response.interceptor';
 
 @Module({
 
