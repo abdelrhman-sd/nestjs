@@ -19,13 +19,11 @@ import TransformResponseInterceptor from '@common/interceptors/transform-respons
     // caching
     CacheModule.registerAsync({
       isGlobal: true,
-      imports: [ConfigModule],
       useClass: CacheModuleOptionsFactory
     }),
 
     // DB Connection via TypeORM
     TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
       useClass: TypeOrmModuleConfigFactory
     })
   ],
